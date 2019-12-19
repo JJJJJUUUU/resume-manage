@@ -1,4 +1,4 @@
 FROM flywithu/oraclejdk8
 VOLUME /tmp
-ADD resume-manage-0.0.1-SNAPSHOT.jar resume-manage.jar
+ADD manage-0.0.1-SNAPSHOT.jar resume-manage.jar
 ENTRYPOINT ["java", "-Xmx256m", "-Xss256k", "-Djava.security.egd=file:/dev/./urandom","-jar", "/resume-manage.jar", "--spring.profiles.active=prod"]
