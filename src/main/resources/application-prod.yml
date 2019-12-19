@@ -1,0 +1,9 @@
+#端口
+server:
+    port: 8080
+##############################url调用接口参数##############################
+url:
+    appId: 5665885423157631
+    appKey: gF9rA553j7p8zTEM
+    version: 0.1.0
+    temp: /home/aspire/temp

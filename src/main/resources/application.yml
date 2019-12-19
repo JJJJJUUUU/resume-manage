@@ -1,0 +1,8 @@
+spring:
+    mvc:
+        favicon:
+            enabled: false
+    profiles:
+        active: dev
+    thymeleaf:
+        cache: false
