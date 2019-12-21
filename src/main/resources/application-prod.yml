@@ -2,8 +2,10 @@
 server:
     port: 8080
 ##############################url调用接口参数##############################
-url:
-    appId: 5665885423157631
-    appKey: gF9rA553j7p8zTEM
-    version: 0.1.0
-    temp: /home/aspire/temp
+spring:
+    session:
+        store-type: redis
+        redis:
+            host: 192.168.16.4
+            port: 6379
+            password: zhangju123

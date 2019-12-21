@@ -2,3 +2,10 @@
 server:
     port: 8888
 ##############################url调用接口参数##############################
+spring:
+    session:
+        store-type: redis
+        redis:
+            host: 106.12.17.202
+            port: 6379
+            password: zhangju123
