@@ -10,7 +10,7 @@ import lombok.Data;
  * 2019/12/20 9:16
  **/
 @Data
-public class JSONObjectResult {
+public class JSONObjectResult<T> {
     /**
      *返回码
      */
@@ -24,5 +24,5 @@ public class JSONObjectResult {
     /**
      *返回数据
      */
-    private JSONObject data;
+    private T data;
 }

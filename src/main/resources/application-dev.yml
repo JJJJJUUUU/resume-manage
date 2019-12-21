@@ -2,8 +2,3 @@
 server:
     port: 8888
 ##############################url调用接口参数##############################
-url:
-    appId: 1544755764765772
-    appKey: 4Ga4xdQ3Qj5iNdEb
-    version: 1.1.0
-    temp: E:/temp/
