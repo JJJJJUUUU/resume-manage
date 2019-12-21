@@ -1,6 +1,5 @@
 package com.zhangju.manage.common;
 
-import com.alibaba.fastjson.JSONObject;
 import lombok.Data;
 
 /**
