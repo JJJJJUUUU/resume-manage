@@ -16,4 +16,16 @@
     <select id="getUserByUserNameAndPassword" parameterType="java.lang.String" resultMap="userMap">
       SELECT * FROM `user` WHERE user_name=#{userName} OR user_mobile=#{userName} AND password=#{password}
    </select>
+    <select id="getUserList" resultMap="userMap">
+        SELECT user_id,user_name,user_mobile,user_status,user_role,create_time FROM `user` WHERE 1
+
+        <if test="userName!=null and userName!=''">
+            AND user_name LIKE CONCAT('%',#{userName},'%')
+            or
+            user_mobile LIKE CONCAT('%',#{userName},'%')
+        </if>
+
+
+
+    </select>
 </mapper>

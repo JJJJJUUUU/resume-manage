@@ -12,6 +12,7 @@ public enum ErrorEnum {
      * 请求成功
      */
     OK(0, "请求成功"),
+    SYSTEM_ERROR(2000,"系统错误"),
     USER_PASSWORD_ERROR(2001,"用户名密码错误");
 
     private int code;

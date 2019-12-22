@@ -13,3 +13,10 @@ mybatis:  #mybatis整合信息
     type-aliases-package: com.zhangju.manage.entiry #entity别名类
     mapper-locations:
     - classpath:mybatis/mapper/*.xml #mapper映射文件
+
+#pagehelper分页插件配置
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql

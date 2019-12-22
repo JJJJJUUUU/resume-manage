@@ -1,6 +1,8 @@
 package com.zhangju.manage.service;
 
 import com.zhangju.manage.entity.User;
+import com.zhangju.manage.model.param.GetUserListParams;
+import com.zhangju.manage.model.vo.GetUserListVO;
 
 /**
  * @author zhangju 卓望信息(北京)
@@ -16,4 +18,10 @@ public interface UserService {
      * @return 用户对象
      */
     User userLogin(String userName, String password);
+
+    /**
+     * 获取用户列表
+     * @return
+     */
+    GetUserListVO getUserList(GetUserListParams params);
 }

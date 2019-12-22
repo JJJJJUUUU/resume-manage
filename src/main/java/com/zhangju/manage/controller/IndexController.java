@@ -1,6 +1,7 @@
 package com.zhangju.manage.controller;
 
 import com.zhangju.manage.common.JSONObjectResult;
+import com.zhangju.manage.common.util.ResponseUtil;
 import com.zhangju.manage.constant.ErrorEnum;
 import com.zhangju.manage.entity.User;
 import com.zhangju.manage.service.UserService;
@@ -37,29 +38,25 @@ public class IndexController {
 
         //通过用户名/手机号查询 密码是否正确
         User user = userService.userLogin(userName, password);
-        JSONObjectResult result = new JSONObjectResult();
+        JSONObjectResult result;
         //用户名密码错误
         if (null == user) {
-            result.setCode(ErrorEnum.USER_PASSWORD_ERROR.getCode());
-            result.setMessage(ErrorEnum.USER_PASSWORD_ERROR.getMessage());
-            result.setData("");
-
-        }else{
-            log.info("登录成功：{}",user);
+            result = ResponseUtil.error(ErrorEnum.USER_PASSWORD_ERROR.getCode(),ErrorEnum.USER_PASSWORD_ERROR.getMessage(),"");
+        } else {
+            log.info("登录成功：{}", user);
             //用户名密码正确允许登录
             //将用户信息存到session中
             HttpSession session = request.getSession(true);
-            session.setAttribute("user",user);
+            session.setAttribute("user", user);
+            result = ResponseUtil.success(user);
 
-            result.setCode(ErrorEnum.OK.getCode());
-            result.setMessage(ErrorEnum.OK.getMessage());
-            result.setData(user);
         }
         return result;
     }
 
     /**
      * 退出登录
+     *
      * @param request
      * @return
      */

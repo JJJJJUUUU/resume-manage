@@ -16,7 +16,6 @@ var vue = new Vue({
         //加载左侧菜单
         let data = sessionStorage.menu;
         if(!data){
-            console.log(88)
             $.ajax({
                 url: menuUrl,
                 dataType: 'text',
