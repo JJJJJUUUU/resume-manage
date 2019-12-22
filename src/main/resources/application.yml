@@ -6,13 +6,7 @@ spring:
         active: dev
     thymeleaf:
         cache: false
-    datasource:
-        type: com.alibaba.druid.pool.DruidDataSource
-        driver-class-name: com.mysql.cj.jdbc.Driver
-        name: resume
-        url: jdbc:mysql://106.12.17.202:3306/resume?useSSL=false&autoReconnect=true&characterEncoding=UTF-8&serverTimezone=UTC
-        username: root
-        password: zhangju123
+
 
 mybatis:  #mybatis整合信息
     config-location: classpath:mybatis/mybatis.cfg.xml  #mybatis所在路径

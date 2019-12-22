@@ -4,8 +4,17 @@ server:
 ##############################url调用接口参数##############################
 spring:
     session:
+        timeout: 10s
         store-type: redis
-        redis:
-            host: 192.168.16.4
-            port: 6379
-            password: zhangju123
+    redis:
+        timeout: 10s
+        host: 192.168.16.4
+        port: 6379
+        password: zhangju123
+    datasource:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        name: resume
+        url: jdbc:mysql://192.168.16.4:3306/resume?useSSL=false&autoReconnect=true&characterEncoding=UTF-8&serverTimezone=UTC
+        username: root
+        password: zhangju123
