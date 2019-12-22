@@ -19,7 +19,7 @@ public class RedisSessionInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception {
         User user = (User)  request.getSession().getAttribute("user");
         if (null == user) {
-            response.sendRedirect("login");
+            response.sendRedirect("/login");
             return false;
         } else {
             return true;

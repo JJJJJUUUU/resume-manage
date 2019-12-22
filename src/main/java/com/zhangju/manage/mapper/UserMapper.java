@@ -3,6 +3,8 @@ package com.zhangju.manage.mapper;
 import com.zhangju.manage.entity.User;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 /**
  * @author zhangju 卓望信息(北京)
  * @version 1.0
@@ -18,4 +20,10 @@ public interface UserMapper {
      * @return
      */
     User getUserByUserNameAndPassword(@Param("userName") String userName, @Param("password")String password);
+
+    /**
+     * 获取用户列表
+     * @return
+     */
+    List<User> getUserList(@Param("userName") String userName);
 }

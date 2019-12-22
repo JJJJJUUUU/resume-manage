@@ -5,14 +5,14 @@
     "hidden": false,
     "list": [{
         "name": "用户列表",
-        "url": "user_list"
+        "url": "/user/user_list"
     }, {
         "name": "添加用户",
-        "url": "user_add"
+        "url": "/user/user_add"
     }]
 },{
     "name": "退出登录",
     "icon": "&#xe65c;",
-    "url": "logout",
+    "url": "/logout",
     "list": []
 }]
