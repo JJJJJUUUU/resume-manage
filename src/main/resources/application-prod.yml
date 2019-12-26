@@ -8,8 +8,9 @@ spring:
         store-type: redis
     redis:
         timeout: 10s
-        host: 192.168.16.4
+        host: 180.76.170.232
         port: 6379
+        password: zhangju123
     datasource:
         type: com.alibaba.druid.pool.DruidDataSource
         driver-class-name: com.mysql.cj.jdbc.Driver
